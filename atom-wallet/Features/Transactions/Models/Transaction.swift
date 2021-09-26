@@ -26,10 +26,10 @@ struct Transaction: Identifiable, Hashable {
     static func getTransactions() -> [Transaction] {
         return [
             Transaction(code: "WIN01", desc: "Saldo Awal", status: .In, date: Date(), nominal: 200000, walletDescription: "Incoming - Dompet Cadangan", walletState: .Active),
-            Transaction(code: "WIN02", desc: "b", status: .In, date: Date(), nominal: 300000, walletDescription: "Incoming - Dompet Cadangan", walletState: .Active),
-            Transaction(code: "WOUT01", desc: "c", status: .Out, date: Date(), nominal: 400000, walletDescription: "Outgoing - Dompet Utama", walletState: .Active),
-            Transaction(code: "WIN01", desc: "d", status: .In, date: Date(), nominal: 500000, walletDescription: "Incoming - Dompet Cadangan", walletState: .Active),
-            Transaction(code: "WIN01", desc: "e", status: .In, date: Date(), nominal: 600000, walletDescription: "Incoming - Dompet Cadangan", walletState: .Active),
+            Transaction(code: "WIN02", desc: "Saldo Awal", status: .In, date: Date(), nominal: 300000, walletDescription: "Incoming - Dompet Cadangan", walletState: .Active),
+            Transaction(code: "WOUT01", desc: "Belanja", status: .Out, date: Date(), nominal: 400000, walletDescription: "Outgoing - Dompet Utama", walletState: .Active),
+            Transaction(code: "WIN03", desc: "Saldo Dummy", status: .In, date: Date(), nominal: 500000, walletDescription: "Incoming - Dompet Cadangan", walletState: .Active),
+            Transaction(code: "WIN04", desc: "Saldo Dummy", status: .In, date: Date(), nominal: 600000, walletDescription: "Incoming - Dompet Cadangan", walletState: .Active),
         ]
     }
 }

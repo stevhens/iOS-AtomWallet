@@ -192,7 +192,7 @@ extension TransactionsView {
     
     private func refreshPage() {
         _ = filterResults()
-//        realm.objects(Transaction.self)
+        realm.objects(Transaction.self)
     }
     
     private func checkTransaction(id: String) -> Bool {

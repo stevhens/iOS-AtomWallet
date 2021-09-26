@@ -278,11 +278,11 @@ extension TransactionFormView {
     }
     
     private func saveTransaction() {
-//        let transaction = Transaction(code: code, desc: desc, status: viewState, date: date, nominal: nominal, walletDescription: desc, walletState: status)
-//        
-//        try! realm.write {
-//            realm.add(transaction)
-//        }
+        let transaction = Transaction(code: code, desc: desc, status: viewState, date: date, nominal: nominal, walletDescription: desc, walletState: status)
+        
+        try! realm.write {
+            realm.add(transaction)
+        }
     }
     
     private func isFieldsComplete() -> Bool {
@@ -311,7 +311,7 @@ extension TransactionFormView {
     
     private func generateCode() -> String {
         let prefix = viewState == .In ? "WIN" : "WOUT"
-        let count = 1
+        let count = realm.getLastTransactionID + 1
         return prefix + String(format: "%06d", count)
     }
 }

@@ -154,7 +154,7 @@ extension WalletFormView {
                 }
             }
         }
-
+        
     }
 }
 
@@ -177,11 +177,11 @@ extension WalletFormView {
     }
     
     private func saveWallet() {
-//        let wallet = Wallet(image: name[0], title: name, reference: reference, desc: desc, status: status)
-//        
-//        try! realm.write {
-//            realm.add(wallet)
-//        }
+        let wallet = Wallet(image: name[0], title: name, reference: reference, desc: desc, status: status)
+        
+        try! realm.write {
+            realm.add(wallet)
+        }
     }
     
     private func isFieldsComplete() -> Bool {

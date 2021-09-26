@@ -162,7 +162,7 @@ extension WalletsView {
     
     private func refreshPage() {
         _ = filterResults()
-//        realm.objects(Wallet.self)
+        realm.objects(Wallet.self)
     }
     
     private func checkWallet(id: String) -> Bool {
